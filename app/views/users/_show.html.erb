@@ -18,7 +18,7 @@
 
 <div class="row">
 
-<%= link_to root_path ,class:"btn btn-success btn-block" do%>
+<%= link_to edit_user_path(current_user) ,class:"btn btn-success btn-block" do%>
 <i class="fa-solid fa-user-gear"></i>
 <% end %>
 </div>
@@ -30,10 +30,10 @@
 <%= form_with model: book do |f| %>
 <h4>Title</h4>
   <%= f.text_field :title %>
-	
+
   <h4>Opinion</h4>
   <%= f.text_area :body %>
-	
+
   <%= f.submit 'Create Book' %>
 <% end %>
 
